@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class TestExample {
 
     @Test
-    public void testGoogle(){
+    public void testGoogle() {
 
         WebDriverManager.chromedriver().setup();
         ChromeDriverService service = new ChromeDriverService.Builder()
@@ -16,7 +16,7 @@ public class TestExample {
                 .build();
         ChromeOptions options = new ChromeOptions();
 
-        WebDriver driver = new ChromeDriver(service,options);
+        WebDriver driver = new ChromeDriver(service, options);
         driver.get("http://www.google.pl");
 
         driver.quit();
