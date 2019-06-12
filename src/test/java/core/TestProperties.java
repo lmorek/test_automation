@@ -28,7 +28,7 @@ public class TestProperties {
 
     public static Properties readPropertiesFromFile(String fileName) {
         Properties properties = new Properties();
-        String propertiesFilePath = System.getProperty("user.dir") + "/src/test/resources/properties" + fileName;
+        String propertiesFilePath = System.getProperty("user.dir") + "/src/test/resources/properties/" + fileName;
         try (Reader reader = new InputStreamReader(new FileInputStream(propertiesFilePath), "UTF-8")) {
             properties.load(reader);
             reader.close();

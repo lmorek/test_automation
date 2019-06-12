@@ -1,24 +1,13 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.chrome.ChromeOptions;
+import base.TestBase;
 import org.testng.annotations.Test;
 
-public class TestExample {
+public class TestExample extends TestBase {
 
     @Test
     public void testGoogle() {
 
-        WebDriverManager.chromedriver().setup();
-        ChromeDriverService service = new ChromeDriverService.Builder()
-                .usingAnyFreePort()
-                .build();
-        ChromeOptions options = new ChromeOptions();
 
-        WebDriver driver = new ChromeDriver(service, options);
-        driver.get("http://www.google.pl");
-
-        driver.quit();
+        System.out.println(getDriver().getTitle()
+        );
     }
 }
