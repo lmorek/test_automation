@@ -13,12 +13,16 @@ public class TestProperties {
 
     private final String environment;
     private final String serverUrl;
+    private final String testUrl;
     private final String browser;
+    private final String browserVersion;
 
     public TestProperties(Properties properties) {
         this.environment = properties.get("environment").toString();
         this.serverUrl = properties.get("serverUrl").toString();
+        this.testUrl = properties.get("testUrl").toString();
         this.browser = properties.get("browser").toString();
+        this.browserVersion=properties.get("browser_version").toString();
 
     }
 
