@@ -1,3 +1,5 @@
+package tests;
+
 import base.TestBase;
 import org.testng.annotations.Test;
 

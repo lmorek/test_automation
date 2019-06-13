@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ExampleTest" >
+    <parameter name="propertiesFile" value="default.properties"/>
+
+    <test name="someTestSuiteExample">
+        <parameter name="environment" value="local"/>
+
+        <classes>
+            <class name="tests.TestExample"/>
+        </classes>
+    </test>
+</suite>

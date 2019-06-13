@@ -19,7 +19,7 @@ public class TestBase extends TestListenerAdapter {
 
 
     public WebDriver getDriver() {
-       return driver.get();
+        return driver.get();
     }
 
     // String e stands for environment, String b stands for browser
@@ -30,6 +30,7 @@ public class TestBase extends TestListenerAdapter {
             } else {
                 environment.set(System.getenv("ENV"));
             }
+        } else {
             environment.set(e);
         }
 
@@ -46,11 +47,11 @@ public class TestBase extends TestListenerAdapter {
     }
 
     @BeforeMethod(alwaysRun = true)
-    @Parameters(value = {"browser"})
-    public void beforeTest(@Optional String browser){
+    @Parameters(value = {"browser", "environment"})
+    public void beforeTest(@Optional String browser, @Optional String environment) {
 
-        setVariables(properties.getEnvironment(),browser);
-        driver.set(new DriverSetup(properties.getEnvironment(),this.browser.get()).setWebDriver());
+        setVariables(environment, browser);
+        driver.set(new DriverSetup(TestBase.environment.get(), this.browser.get()).setWebDriver());
         getDriver().manage().window().maximize();
         getDriver().get(properties.getTestUrl());
     }
