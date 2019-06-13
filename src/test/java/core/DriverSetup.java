@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+//TODO add capabilities
 public class DriverSetup {
     private DesiredCapabilities capabilities;
     private String environment;

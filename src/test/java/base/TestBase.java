@@ -51,7 +51,7 @@ public class TestBase extends TestListenerAdapter {
     public void beforeTest(@Optional String browser, @Optional String environment) {
 
         setVariables(environment, browser);
-        driver.set(new DriverSetup(TestBase.environment.get(), this.browser.get()).setWebDriver());
+        driver.set(new DriverSetup(TestBase.environment.get(), TestBase.browser.get()).setWebDriver());
         getDriver().manage().window().maximize();
         getDriver().get(properties.getTestUrl());
     }
