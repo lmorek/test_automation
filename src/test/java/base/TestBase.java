@@ -1,12 +1,12 @@
 package base;
 
 import core.DriverSetup;
-import core.TestProperties;
+import core.properties.TestProperties;
 import org.openqa.selenium.WebDriver;
 import org.testng.TestListenerAdapter;
 import org.testng.annotations.*;
 
-import static core.TestProperties.readPropertiesFromFile;
+import static core.properties.TestProperties.readPropertiesFromFile;
 
 public class TestBase extends TestListenerAdapter {
 
