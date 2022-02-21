@@ -1,0 +1,16 @@
+## IDE specific
+build/
+# JetBrains
+.idea/
+*.iml
+#files
+logs/
+target/
+.DS_Store
+src/.DS_Store
+src/test/.DS_Store
+src/test/resources/selenium_standalone_binaries/
+src/test/resources/selenium_standalone_zips/
+
+
+
